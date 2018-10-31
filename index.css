@@ -1,0 +1,138 @@
+h1
+ {
+    text-align: center;
+}
+
+.view
+ {
+    display: none;
+    margin: 0;
+}
+
+label[for='view']
+ {
+    display: inline-block;
+    font-size: 30px;
+    margin: 0;
+}
+
+.view:checked + label
+ {
+    transform: rotate(90deg);
+}
+
+.card
+ {
+    border: 1px solid gray;
+    margin: 10px;
+}
+
+.card:hover
+ {
+    box-shadow: 2px 2px 3px 3px darkslategray;
+}
+
+.view:checked ~ .card
+ {
+    vertical-align: top;
+    display: inline-block;
+    width: 300px;
+    height: 350px;
+}
+
+.view:not(:checked) ~ .card
+ {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 550px;
+}
+
+.imageholder
+ {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.view:not(:checked) ~ .card .imageholder
+ {
+    height: 65%;
+}
+
+.name
+ {
+    font-size: 25px;
+    color: black;
+    margin-left: 2px;
+    text-decoration: none;
+}
+
+.name:visited
+ {
+    color: chocolate;
+}
+
+.name:hover
+ {
+    color: brown;
+}
+
+img
+ {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover
+ {
+    height: 120%;
+    width: 120%;
+}
+
+.view:not(:checked) ~ .card img
+ {
+    height: 400px;
+}
+
+.view:not(:checked) ~ .card img:hover
+ {
+    height: 450px;
+}
+
+p
+ {
+    margin: 2px;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+div
+ {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+}
+
+.view:not(:checked) ~ .card .brief_description
+ {
+    visibility: hidden;
+}
+
+.full_description
+ {
+    position: relative;
+    bottom: 20%;
+}
+
+.view:checked ~ .card .full_description
+ {
+    visibility: hidden;
+    height: 0;
+}
